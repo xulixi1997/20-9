@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>吉林省星航网络科技有限公司 | 数字化转型的领航者</title>
+    <meta name="description" content="吉林省星航网络科技有限公司专注于高端软件开发、移动应用定制与数字化解决方案。位于四平市铁东区，致力于为企业提供技术驱动的增长引擎。">
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#0f172a',
+                            primary: '#3b82f6',
+                            accent: '#06b6d4',
+                            light: '#f8fafc'
+                        }
+                    },
+                    backgroundImage: {
+                        'hero-pattern': "linear-gradient(to right bottom, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop')",
+                        'tech-grid': "url('https://www.transparenttextures.com/patterns/cubes.png')"
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body { font-family: 'Noto Sans SC', sans-serif; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #3b82f6, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* 隐藏滚动条但保留功能 */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-brand-dark text-slate-300 overflow-x-hidden">
+
+    <!-- Module 1: Top Bar (Contact Info) -->
+    <div class="bg-slate-900 text-xs py-2 border-b border-slate-800 hidden md:block">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="flex space-x-6">
+                <span><i class="fas fa-map-marker-alt text-brand-accent mr-2"></i>四平市铁东区平东街建工委国测小区1号楼2层112号</span>
+                <span><i class="fas fa-envelope text-brand-accent mr-2"></i>info@jlxinghangnet.asia</span>
+            </div>
+            <div class="flex space-x-4">
+                <a href="#" class="hover:text-brand-accent transition"><i class="fab fa-weixin"></i></a>
+                <a href="#" class="hover:text-brand-accent transition"><i class="fab fa-weibo"></i></a>
+                <a href="#" class="hover:text-brand-accent transition"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Module 2: Navigation Bar -->
+    <nav class="sticky top-0 z-50 bg-brand-dark/90 backdrop-blur-md border-b border-slate-800 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-lg flex items-center justify-center text-white font-bold text-xl">
+                    X
+                </div>
+                <div>
+                    <h1 class="text-2xl font-bold text-white tracking-wide">星航网络</h1>
+                    <p class="text-[10px] text-brand-accent uppercase tracking-widest">XINGHANG TECH</p>
+                </div>
+            </div>
+            
+            <div class="hidden lg:flex items-center space-x-8 text-sm font-medium">
+                <a href="#home" class="text-white hover:text-brand-accent transition">首页</a>
+                <a href="#services" class="hover:text-brand-accent transition">解决方案</a>
+                <a href="#process" class="hover:text-brand-accent transition">开发流程</a>
+                <a href="#portfolio" class="hover:text-brand-accent transition">成功案例</a>
+                <a href="#about" class="hover:text-brand-accent transition">关于我们</a>
+                <a href="#contact" class="bg-brand-primary hover:bg-blue-600 text-white px-5 py-2 rounded-full transition shadow-lg shadow-blue-500/30">
+                    立即咨询
+                </a>
+            </div>
+
+            <button class="lg:hidden text-2xl text-white" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden bg-slate-900 border-t border-slate-800 lg:hidden p-6 space-y-4">
+            <a href="#home" class="block text-white">首页</a>
+            <a href="#services" class="block text-slate-300">解决方案</a>
+            <a href="#process" class="block text-slate-300">开发流程</a>
+            <a href="#contact" class="block text-brand-accent font-bold">联系我们</a>
+        </div>
+    </nav>
+
+    <!-- Module 3: Hero Section -->
+    <section id="home" class="relative h-[85vh] flex items-center bg-hero-pattern bg-cover bg-center bg-fixed bg-no-repeat">
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent"></div>
+        <div class="container mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right">
+                <span class="bg-blue-900/50 text-blue-300 px-3 py-1 rounded-full text-xs font-semibold border border-blue-700/50 mb-4 inline-block">
+                    🚀 2025年最新软件开发技术栈
+                </span>
+                <h2 class="text-5xl lg:text-7xl font-black text-white leading-tight mb-6">
+                    重塑您的 <br> <span class="text-gradient">数字未来</span>
+                </h2>
+                <p class="text-lg text-slate-300 mb-8 max-w-lg leading-relaxed">
+                    吉林省星航网络科技有限公司致力于为具有前瞻性视野的企业提供卓越的软件开发服务。从复杂系统架构到极致移动体验，我们用代码构建商业壁垒。
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contact" class="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-lg font-bold shadow-lg shadow-cyan-500/20 hover:scale-105 transition transform text-center">
+                        启动项目
+                    </a>
+                    <a href="#portfolio" class="px-8 py-4 border border-slate-600 text-white rounded-lg font-bold hover:bg-white/10 transition text-center backdrop-blur-sm">
+                        查看案例
+                    </a>
+                </div>
+            </div>
+            <div class="hidden lg:block relative" data-aos="zoom-in" data-aos-delay="200">
+                <!-- Abstract 3D Element Representation -->
+                <div class="relative w-full h-[500px]">
+                     <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop" alt="Technology Dashboard" class="rounded-2xl shadow-2xl shadow-cyan-500/20 border border-slate-700 object-cover h-full w-full mask-image-gradient">
+                     <div class="absolute -bottom-10 -left-10 bg-slate-800 p-6 rounded-xl border border-slate-700 shadow-xl animate-bounce duration-[3000ms]">
+                         <div class="flex items-center space-x-4">
+                             <div class="bg-green-500/20 p-3 rounded-full text-green-400"><i class="fas fa-code"></i></div>
+                             <div>
+                                 <p class="text-xs text-slate-400">项目交付率</p>
+                                 <p class="text-2xl font-bold text-white">100%</p>
+                             </div>
+                         </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 4: Trusted By (Marquee) -->
+    <div class="py-10 bg-slate-900/50 border-y border-slate-800">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-sm text-slate-500 mb-6 tracking-widest uppercase">超过 200+ 企业的信任选择</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 opacity-50 grayscale hover:grayscale-0 transition-all duration-500 items-center justify-items-center">
+                <i class="fab fa-aws text-4xl hover:text-white transition"></i>
+                <i class="fab fa-google text-3xl hover:text-white transition"></i>
+                <i class="fab fa-microsoft text-3xl hover:text-white transition"></i>
+                <i class="fab fa-react text-4xl hover:text-white transition"></i>
+                <i class="fab fa-vuejs text-4xl hover:text-white transition"></i>
+                <i class="fab fa-python text-4xl hover:text-white transition"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Module 5: Value Proposition (Cards) -->
+    <section class="py-20 relative overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h3 class="text-brand-accent font-bold uppercase tracking-widest mb-2">核心优势</h3>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">为什么选择星航网络？</h2>
+                <p class="text-slate-400">我们不仅仅是代码的搬运工，更是您商业模式落地的技术合伙人。</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="glass-card p-8 rounded-2xl hover:bg-white/10 transition duration-300 group" data-aos="fade-up" data-aos-delay="0">
+                    <div class="w-14 h-14 bg-blue-500/20 rounded-xl flex items-center justify-center text-blue-400 text-2xl mb-6 group-hover:scale-110 transition">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">极速交付能力</h4>
+                    <p class="text-sm text-slate-400 leading-relaxed">采用敏捷开发模式与模块化架构，在保证代码质量的前提下，将产品上市时间缩短 30%。</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="glass-card p-8 rounded-2xl hover:bg-white/10 transition duration-300 group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-cyan-500/20 rounded-xl flex items-center justify-center text-cyan-400 text-2xl mb-6 group-hover:scale-110 transition">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">企业级数据安全</h4>
+                    <p class="text-sm text-slate-400 leading-relaxed">严格遵循国际安全标准，提供从数据加密、权限管理到容灾备份的全方位安全保障体系。</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="glass-card p-8 rounded-2xl hover:bg-white/10 transition duration-300 group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-purple-500/20 rounded-xl flex items-center justify-center text-purple-400 text-2xl mb-6 group-hover:scale-110 transition">
+                        <i class="fas fa-users-cog"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">终身技术维护</h4>
+                    <p class="text-sm text-slate-400 leading-relaxed">交付不是终点。我们提供全生命周期的技术支持与迭代升级服务，确保您的系统永不过时。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 6: About Summary -->
+    <section id="about" class="py-20 bg-slate-900">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div class="relative" data-aos="fade-right">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop" alt="Our Team" class="rounded-2xl shadow-2xl border border-slate-700 relative z-10">
+                <div class="absolute -bottom-6 -right-6 w-2/3 h-2/3 bg-brand-primary/20 rounded-2xl -z-0"></div>
+                <div class="absolute -top-6 -left-6 w-24 h-24 bg-dots-pattern opacity-30"></div>
+            </div>
+            <div data-aos="fade-left">
+                <h2 class="text-3xl font-bold text-white mb-6">扎根吉林，服务全球<br><span class="text-brand-accent">技术驱动的创新引擎</span></h2>
+                <p class="text-slate-400 mb-6 leading-relaxed">
+                    吉林省星航网络科技有限公司成立于四平市，是一家专注于高端软件定制开发的技术型企业。我们的团队由来自北上广深回流的资深架构师、全栈工程师及UI设计师组成。
+                </p>
+                <p class="text-slate-400 mb-8 leading-relaxed">
+                    我们不兜售模板，只提供量身定制的解决方案。无论是初创公司的MVP（最小可行性产品），还是大型企业的数字化管理系统，我们都能精准匹配需求，用代码创造实实在在的商业价值。
+                </p>
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-center text-slate-300">
+                        <i class="fas fa-check-circle text-brand-primary mr-3"></i> 5年+ 行业深耕经验
+                    </li>
+                    <li class="flex items-center text-slate-300">
+                        <i class="fas fa-check-circle text-brand-primary mr-3"></i> 100% 源码交付，无捆绑
+                    </li>
+                    <li class="flex items-center text-slate-300">
+                        <i class="fas fa-check-circle text-brand-primary mr-3"></i> 7x24小时 快速响应机制
+                    </li>
+                </ul>
+                <a href="#contact" class="text-brand-accent font-bold hover:underline">了解更多关于我们 <i class="fas fa-arrow-right ml-2"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 7: Core Services Overview -->
+    <section id="services" class="py-24 bg-brand-dark relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-brand-accent font-semibold tracking-wider uppercase text-sm">Our Expertise</span>
+                <h2 class="text-4xl font-bold text-white mt-2">全栈式开发服务体系</h2>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-0 border border-slate-800 rounded-3xl overflow-hidden bg-slate-900/50">
+                <!-- Service 1 -->
+                <div class="p-10 border-b lg:border-b-0 lg:border-r border-slate-800 hover:bg-slate-800 transition duration-300 group">
+                    <i class="fas fa-laptop-code text-5xl text-blue-500 mb-6 group-hover:scale-110 transition transform duration-300"></i>
+                    <h3 class="text-2xl font-bold text-white mb-4">企业级软件定制</h3>
+                    <p class="text-slate-400 mb-6 text-sm">针对企业特定业务流程，开发ERP、CRM、OA及供应链管理系统。解决标准软件无法适配的痛点，提升运营效率。</p>
+                    <ul class="text-sm text-slate-500 space-y-2">
+                        <li>• 业务流程重组与数字化</li>
+                        <li>• 遗留系统数据迁移</li>
+                        <li>• 高并发架构设计</li>
+                    </ul>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="p-10 border-b lg:border-b-0 lg:border-r border-slate-800 hover:bg-slate-800 transition duration-300 group">
+                    <i class="fas fa-mobile-alt text-5xl text-cyan-500 mb-6 group-hover:scale-110 transition transform duration-300"></i>
+                    <h3 class="text-2xl font-bold text-white mb-4">移动应用 & 小程序</h3>
+                    <p class="text-slate-400 mb-6 text-sm">覆盖 iOS、Android 原生开发及微信/抖音小程序开发。打造极致用户体验，抢占移动互联网流量入口。</p>
+                    <ul class="text-sm text-slate-500 space-y-2">
+                        <li>• 跨平台 Flutter/React Native</li>
+                        <li>• 微信生态全案开发</li>
+                        <li>• LBS/即时通讯/直播功能集成</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="p-10 hover:bg-slate-800 transition duration-300 group">
+                    <i class="fas fa-cloud text-5xl text-purple-500 mb-6 group-hover:scale-110 transition transform duration-300"></i>
+                    <h3 class="text-2xl font-bold text-white mb-4">物联网与大数据</h3>
+                    <p class="text-slate-400 mb-6 text-sm">软硬结合，实现设备互联与数据可视化大屏展示。为工业互联网、智慧农业、智慧社区提供底层技术支持。</p>
+                    <ul class="text-sm text-slate-500 space-y-2">
+                        <li>• IoT 设备数据采集与控制</li>
+                        <li>• BI 商业智能数据看板</li>
+                        <li>• AI 算法接入与应用</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 8: Specific Tech Stack (Grid) -->
+    <section class="py-16 bg-slate-900 border-t border-slate-800">
+        <div class="container mx-auto px-6">
+            <h3 class="text-center text-xl text-white font-bold mb-10">我们精通的技术栈</h3>
+            <div class="flex flex-wrap justify-center gap-4 md:gap-8">
+                <span class="px-6 py-3 rounded-lg bg-slate-800 border border-slate-700 text-slate-300 font-mono hover:border-brand-primary hover:text-white transition">Java / SpringBoot</span>
+                <span class="px-6 py-3 rounded-lg bg-slate-800 border border-slate-700 text-slate-300 font-mono hover:border-brand-primary hover:text-white transition">Vue.js / React</span>
+                <span class="px-6 py-3 rounded-lg bg-slate-800 border border-slate-700 text-slate-300 font-mono hover:border-brand-primary hover:text-white transition">Python / Django</span>
+                <span class="px-6 py-3 rounded-lg bg-slate-800 border border-slate-700 text-slate-300 font-mono hover:border-brand-primary hover:text-white transition">Flutter</span>
+                <span class="px-6 py-3 rounded-lg bg-slate-800 border border-slate-700 text-slate-300 font-mono hover:border-brand-primary hover:text-white transition">MySQL / Redis</span>
+                <span class="px-6 py-3 rounded-lg bg-slate-800 border border-slate-700 text-slate-300 font-mono hover:border-brand-primary hover:text-white transition">Docker / K8s</span>
+                <span class="px-6 py-3 rounded-lg bg-slate-800 border border-slate-700 text-slate-300 font-mono hover:border-brand-primary hover:text-white transition">Node.js</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 9: Development Process -->
+    <section id="process" class="py-20 bg-brand-dark">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white">标准化开发流程</h2>
+                <p class="text-slate-400 mt-4">透明、可控、高效的项目管理机制</p>
+            </div>
+            
+            <div class="relative">
+                <!-- Line -->
+                <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-slate-800 -translate-y-1/2 z-0"></div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-8 relative z-10">
+                    <!-- Step 1 -->
+                    <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl text-center hover:-translate-y-2 transition duration-300">
+                        <div class="w-12 h-12 mx-auto bg-blue-600 rounded-full flex items-center justify-center text-white font-bold mb-4 shadow-lg shadow-blue-600/30">1</div>
+                        <h4 class="text-white font-bold mb-2">需求调研</h4>
+                        <p class="text-xs text-slate-400">深度沟通，梳理业务逻辑与功能列表</p>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl text-center hover:-translate-y-2 transition duration-300">
+                        <div class="w-12 h-12 mx-auto bg-slate-700 rounded-full flex items-center justify-center text-white font-bold mb-4">2</div>
+                        <h4 class="text-white font-bold mb-2">原型设计</h4>
+                        <p class="text-xs text-slate-400">输出UI高保真设计图与交互原型</p>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl text-center hover:-translate-y-2 transition duration-300">
+                        <div class="w-12 h-12 mx-auto bg-slate-700 rounded-full flex items-center justify-center text-white font-bold mb-4">3</div>
+                        <h4 class="text-white font-bold mb-2">代码开发</h4>
+                        <p class="text-xs text-slate-400">前后端编码，定期汇报进度</p>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl text-center hover:-translate-y-2 transition duration-300">
+                        <div class="w-12 h-12 mx-auto bg-slate-700 rounded-full flex items-center justify-center text-white font-bold mb-4">4</div>
+                        <h4 class="text-white font-bold mb-2">测试验收</h4>
+                        <p class="text-xs text-slate-400">压力测试、Bug修复与客户验收</p>
+                    </div>
+                    <!-- Step 5 -->
+                    <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl text-center hover:-translate-y-2 transition duration-300">
+                        <div class="w-12 h-12 mx-auto bg-green-500 rounded-full flex items-center justify-center text-white font-bold mb-4 shadow-lg shadow-green-500/30">5</div>
+                        <h4 class="text-white font-bold mb-2">上线维护</h4>
+                        <p class="text-xs text-slate-400">部署服务器，提供长期技术保障</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 10: Numbers/Statistics -->
+    <div class="bg-gradient-to-r from-blue-900 to-slate-900 py-16">
+        <div class="container mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-white/10">
+            <div>
+                <div class="text-4xl font-bold text-white mb-2 counter" data-target="5">5+</div>
+                <div class="text-sm text-cyan-300 uppercase tracking-wider">年行业经验</div>
+            </div>
+            <div>
+                <div class="text-4xl font-bold text-white mb-2 counter" data-target="120">120+</div>
+                <div class="text-sm text-cyan-300 uppercase tracking-wider">成功案例</div>
+            </div>
+            <div>
+                <div class="text-4xl font-bold text-white mb-2 counter" data-target="15">15+</div>
+                <div class="text-sm text-cyan-300 uppercase tracking-wider">技术专家</div>
+            </div>
+            <div>
+                <div class="text-4xl font-bold text-white mb-2 counter" data-target="98">98%</div>
+                <div class="text-sm text-cyan-300 uppercase tracking-wider">客户满意度</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Module 11: Portfolio/Case Studies -->
+    <section id="portfolio" class="py-24 bg-brand-dark">
+        <div class="container mx-auto px-6">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-3xl font-bold text-white">精选案例展示</h2>
+                    <p class="text-slate-400 mt-2">用作品说话，见证数字化转型的力量</p>
+                </div>
+                <a href="#" class="hidden md:inline-block text-brand-primary hover:text-white transition">查看所有案例 -></a>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Case 1 -->
+                <div class="group relative overflow-hidden rounded-2xl cursor-pointer" data-aos="fade-up">
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?q=80&w=2070&auto=format&fit=crop" alt="Smart Retail" class="w-full h-80 object-cover transition duration-700 group-hover:scale-110 group-hover:rotate-1">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-90 transition duration-300">
+                        <div class="absolute bottom-0 left-0 p-8">
+                            <span class="text-brand-accent text-xs font-bold uppercase mb-2 block">SaaS 平台</span>
+                            <h3 class="text-xl font-bold text-white mb-2">某大型连锁商超智慧零售系统</h3>
+                            <p class="text-slate-300 text-sm line-clamp-2">整合线上商城与线下库存，实现会员数据互通，销售额提升45%。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case 2 -->
+                <div class="group relative overflow-hidden rounded-2xl cursor-pointer" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" alt="Fintech App" class="w-full h-80 object-cover transition duration-700 group-hover:scale-110 group-hover:rotate-1">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-90 transition duration-300">
+                        <div class="absolute bottom-0 left-0 p-8">
+                            <span class="text-brand-accent text-xs font-bold uppercase mb-2 block">移动 App 开发</span>
+                            <h3 class="text-xl font-bold text-white mb-2">供应链金融数据分析平台</h3>
+                            <p class="text-slate-300 text-sm line-clamp-2">高并发架构设计，实时处理百万级交易数据，保障资金流转安全。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case 3 -->
+                <div class="group relative overflow-hidden rounded-2xl cursor-pointer" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop" alt="Industrial IoT" class="w-full h-80 object-cover transition duration-700 group-hover:scale-110 group-hover:rotate-1">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-90 transition duration-300">
+                        <div class="absolute bottom-0 left-0 p-8">
+                            <span class="text-brand-accent text-xs font-bold uppercase mb-2 block">工业互联网</span>
+                            <h3 class="text-xl font-bold text-white mb-2">智能工厂设备监控大屏</h3>
+                            <p class="text-slate-300 text-sm line-clamp-2">基于 ECharts 与 WebGL 技术，实时3D可视化展示生产线状态。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 12: Testimonials -->
+    <section class="py-20 bg-slate-900">
+        <div class="container mx-auto px-6">
+            <h2 class="text-center text-3xl font-bold text-white mb-12">客户评价</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-brand-dark p-8 rounded-xl border border-slate-800 relative">
+                    <i class="fas fa-quote-left text-4xl text-slate-700 absolute top-4 left-4"></i>
+                    <p class="text-slate-300 mb-6 italic relative z-10 pt-4">"星航网络团队的专业程度超出了我们的预期。不仅代码质量高，而且在产品设计阶段给了我们很多宝贵的建议，帮助我们避免了很多弯路。"</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-slate-700 rounded-full flex items-center justify-center text-white font-bold mr-3">张</div>
+                        <div>
+                            <h5 class="text-white font-bold text-sm">张总</h5>
+                            <p class="text-xs text-slate-500">某物流科技公司 CEO</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-brand-dark p-8 rounded-xl border border-slate-800 relative">
+                    <i class="fas fa-quote-left text-4xl text-slate-700 absolute top-4 left-4"></i>
+                    <p class="text-slate-300 mb-6 italic relative z-10 pt-4">"响应速度非常快，售后服务也很到位。系统上线一年多运行稳定，是我们值得信赖的技术合作伙伴。"</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-slate-700 rounded-full flex items-center justify-center text-white font-bold mr-3">李</div>
+                        <div>
+                            <h5 class="text-white font-bold text-sm">李经理</h5>
+                            <p class="text-xs text-slate-500">四平市某制造企业 负责人</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 13: FAQ Section -->
+    <section class="py-16 bg-brand-dark border-t border-slate-800">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-3xl font-bold text-white mb-10 text-center">常见问题</h2>
+            <div class="space-y-4">
+                <details class="group bg-slate-900 rounded-lg border border-slate-800">
+                    <summary class="flex justify-between items-center font-medium cursor-pointer list-none p-5 text-white">
+                        <span>定制开发一款软件大概需要多少钱？</span>
+                        <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <div class="text-slate-400 p-5 pt-0 text-sm leading-relaxed">
+                        软件开发价格取决于功能的复杂程度、平台要求（Web/App/小程序）以及设计要求。我们通常会在需求调研后提供详细的功能报价单，价格透明，无隐形消费。欢迎联系我们获取免费评估。
+                    </div>
+                </details>
+                <details class="group bg-slate-900 rounded-lg border border-slate-800">
+                    <summary class="flex justify-between items-center font-medium cursor-pointer list-none p-5 text-white">
+                        <span>开发周期一般需要多久？</span>
+                        <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <div class="text-slate-400 p-5 pt-0 text-sm leading-relaxed">
+                        简单的展示型小程序或网站通常需要 2-3 周。复杂的企业管理系统或大型 App 开发周期通常在 2-3 个月左右。我们会制定详细的项目进度表，确保按时交付。
+                    </div>
+                </details>
+                <details class="group bg-slate-900 rounded-lg border border-slate-800">
+                    <summary class="flex justify-between items-center font-medium cursor-pointer list-none p-5 text-white">
+                        <span>项目交付后源码归谁所有？</span>
+                        <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <div class="text-slate-400 p-5 pt-0 text-sm leading-relaxed">
+                        星航网络承诺 100% 源码交付。项目结项后，所有源代码、设计源文件、数据库脚本及相关文档的所有权归客户所有，您可以自由进行二次开发。
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 14: CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-blue-600 to-cyan-600 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-30"></div>
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">准备好开始您的数字化之旅了吗？</h2>
+            <p class="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">无论您是有具体的项目需求，还是仅仅有一个初步的想法，我们都乐意与您探讨。</p>
+            <a href="#contact" class="inline-block bg-white text-blue-600 font-bold px-10 py-4 rounded-full text-lg shadow-xl hover:bg-slate-100 hover:-translate-y-1 transition transform">
+                免费获取项目方案
+            </a>
+        </div>
+    </section>
+
+    <!-- Module 15: News / Insights (Condensed) -->
+    <section class="py-16 bg-brand-dark">
+        <div class="container mx-auto px-6">
+            <div class="flex justify-between items-center mb-8">
+                <h3 class="text-2xl font-bold text-white">行业洞察</h3>
+                <a href="#" class="text-sm text-slate-500 hover:text-white">更多资讯 ></a>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <article class="bg-slate-900 rounded-lg overflow-hidden border border-slate-800 hover:border-brand-primary transition">
+                    <div class="p-6">
+                        <span class="text-xs text-brand-accent mb-2 block">2023-10-15</span>
+                        <h4 class="text-white font-bold mb-2 text-lg hover:text-brand-primary cursor-pointer">企业数字化转型：不仅是技术，更是思维的革新</h4>
+                        <p class="text-slate-400 text-sm line-clamp-3">在当今竞争激烈的市场环境中，数字化转型已成为企业生存和发展的必选题...</p>
+                    </div>
+                </article>
+                <article class="bg-slate-900 rounded-lg overflow-hidden border border-slate-800 hover:border-brand-primary transition">
+                    <div class="p-6">
+                        <span class="text-xs text-brand-accent mb-2 block">2023-09-22</span>
+                        <h4 class="text-white font-bold mb-2 text-lg hover:text-brand-primary cursor-pointer">如何选择靠谱的软件外包服务商？</h4>
+                        <p class="text-slate-400 text-sm line-clamp-3">面对市场上良莠不齐的软件开发公司，甲方企业该如何避坑？本文为您详细解析...</p>
+                    </div>
+                </article>
+                 <article class="bg-slate-900 rounded-lg overflow-hidden border border-slate-800 hover:border-brand-primary transition">
+                    <div class="p-6">
+                        <span class="text-xs text-brand-accent mb-2 block">2023-08-10</span>
+                        <h4 class="text-white font-bold mb-2 text-lg hover:text-brand-primary cursor-pointer">AIGC 时代，软件开发的未来趋势</h4>
+                        <p class="text-slate-400 text-sm line-clamp-3">人工智能生成内容正在重塑代码编写方式，作为开发者我们如何拥抱变化...</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 16: Contact Section -->
+    <section id="contact" class="py-20 bg-slate-900 relative">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16">
+                <!-- Contact Info -->
+                <div data-aos="fade-right">
+                    <h2 class="text-4xl font-bold text-white mb-6">联系我们</h2>
+                    <p class="text-slate-400 mb-10">期待与您的合作，欢迎莅临公司参观或来电咨询。</p>
+                    
+                    <div class="space-y-8">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-blue-900/50 rounded-lg flex items-center justify-center text-brand-accent text-xl mr-6 flex-shrink-0">
+                                <i class="fas fa-map-marked-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-lg mb-1">公司地址</h4>
+                                <p class="text-slate-400 text-sm">四平市铁东区平东街建工委国测小区1号楼2层112号</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-blue-900/50 rounded-lg flex items-center justify-center text-brand-accent text-xl mr-6 flex-shrink-0">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-lg mb-1">咨询热线</h4>
+                                <p class="text-slate-400 text-sm hover:text-white transition">
+                                    <a href="tel:17214267071">172-1426-7071</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-blue-900/50 rounded-lg flex items-center justify-center text-brand-accent text-xl mr-6 flex-shrink-0">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-lg mb-1">电子邮箱</h4>
+                                <p class="text-slate-400 text-sm hover:text-white transition">
+                                    <a href="mailto:info@jlxinghangnet.asia">info@jlxinghangnet.asia</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-brand-dark p-8 rounded-2xl border border-slate-800 shadow-2xl" data-aos="fade-left">
+                    <h3 class="text-2xl font-bold text-white mb-6">在线留言</h3>
+                    <form class="space-y-6" onsubmit="event.preventDefault(); alert('感谢您的留言，我们会尽快联系您！');">
+                        <div class="grid grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm text-slate-400 mb-2">姓名</label>
+                                <input type="text" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-primary transition" placeholder="您的姓名">
+                            </div>
+                            <div>
+                                <label class="block text-sm text-slate-400 mb-2">电话</label>
+                                <input type="tel" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-primary transition" placeholder="联系电话">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm text-slate-400 mb-2">需求类型</label>
+                            <select class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-primary transition">
+                                <option>定制软件开发</option>
+                                <option>移动App开发</option>
+                                <option>微信/小程序开发</option>
+                                <option>技术咨询/其他</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm text-slate-400 mb-2">项目描述</label>
+                            <textarea rows="4" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-primary transition" placeholder="请简要描述您的需求..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-brand-primary hover:bg-blue-600 text-white font-bold py-4 rounded-lg transition shadow-lg shadow-blue-600/20">
+                            发送消息
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 17: Map (Visual Placeholder via CSS) -->
+    <div class="h-64 w-full bg-slate-800 relative grayscale hover:grayscale-0 transition duration-500 overflow-hidden group">
+        <!-- Using an image to represent map to ensure no broken iframes -->
+        <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=2074&auto=format&fit=crop" class="w-full h-full object-cover opacity-50 group-hover:scale-105 transition duration-700" alt="Map Location">
+        <div class="absolute inset-0 flex items-center justify-center">
+            <div class="bg-white/10 backdrop-blur-md px-6 py-3 rounded-full border border-white/20 text-white font-bold flex items-center">
+                <i class="fas fa-map-pin text-red-500 mr-2"></i> 吉林省四平市铁东区
+            </div>
+        </div>
+    </div>
+
+    <!-- Module 18: Footer -->
+    <footer class="bg-brand-dark pt-16 border-t border-slate-800">
+        <div class="container mx-auto px-6 pb-12">
+            <div class="grid md:grid-cols-4 gap-12">
+                <div class="col-span-1 md:col-span-1">
+                    <h3 class="text-2xl font-bold text-white mb-4">星航网络</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-6">
+                        吉林省星航网络科技有限公司是一家专注于技术创新的软件开发服务商，致力于通过先进的技术手段帮助企业实现数字化转型。
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-brand-primary hover:text-white transition"><i class="fab fa-weixin"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-brand-primary hover:text-white transition"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-6">服务项目</h4>
+                    <ul class="space-y-3 text-slate-400 text-sm">
+                        <li><a href="#" class="hover:text-brand-accent transition">软件定制开发</a></li>
+                        <li><a href="#" class="hover:text-brand-accent transition">移动 App 开发</a></li>
+                        <li><a href="#" class="hover:text-brand-accent transition">微信小程序</a></li>
+                        <li><a href="#" class="hover:text-brand-accent transition">UI/UX 设计</a></li>
+                        <li><a href="#" class="hover:text-brand-accent transition">大数据可视化</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-6">快速链接</h4>
+                    <ul class="space-y-3 text-slate-400 text-sm">
+                        <li><a href="#about" class="hover:text-brand-accent transition">关于我们</a></li>
+                        <li><a href="#portfolio" class="hover:text-brand-accent transition">成功案例</a></li>
+                        <li><a href="#process" class="hover:text-brand-accent transition">合作流程</a></li>
+                        <li><a href="#" class="hover:text-brand-accent transition">加入我们</a></li>
+                        <li><a href="#" class="hover:text-brand-accent transition">隐私政策</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-6">联系方式</h4>
+                    <ul class="space-y-3 text-slate-400 text-sm">
+                        <li><i class="fas fa-phone mr-2 text-brand-primary"></i> 17214267071</li>
+                        <li><i class="fas fa-envelope mr-2 text-brand-primary"></i> info@jlxinghangnet.asia</li>
+                        <li class="flex items-start"><i class="fas fa-map-marker-alt mr-2 text-brand-primary mt-1"></i> 四平市铁东区平东街建工委国测小区1号楼2层112号</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bg-slate-950 py-6 text-center text-slate-600 text-sm">
+            <div class="container mx-auto px-6">
+                <p>&copy; 2024 吉林省星航网络科技有限公司 All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS Animation
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100,
+            easing: 'ease-out-cubic'
+        });
+
+        // Sticky Navbar Effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-lg', 'bg-brand-dark/95');
+            } else {
+                navbar.classList.remove('shadow-lg', 'bg-brand-dark/90');
+            }
+        });
+
+        // Simple Counter Animation
+        const counters = document.querySelectorAll('.counter');
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText.replace('+', '').replace('%', '');
+                const speed = 200;
+                const inc = target / speed;
+
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + inc) + (counter.getAttribute('data-target').includes('%') ? '%' : '+');
+                    setTimeout(updateCount, 20);
+                } else {
+                    counter.innerText = target + (counter.getAttribute('data-target').includes('%') ? '%' : '+');
+                }
+            };
+            // Trigger animation when element is in view (using Intersection Observer in a real production environment, here simplified)
+            updateCount();
+        });
+    </script>
+</body>
+</html>
